@@ -17,6 +17,7 @@ mongoose.connect('mongodb://root:jamazon@ds225840.mlab.com:25840/jamazon', (err)
   }
 });
 
+app.use(express.static(__dirname + '/public'));
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
